@@ -1,0 +1,15 @@
+.env*
+.git*
+.prettierrc
+.styleci.yml
+.sublime-project
+_ide_helper.php
+_ide_helper_models.php
+docker-compose*
+Makefile
+phpcs.xml
+phpunit.xml
+README.md
+.ci
+.github
+.eslintrc.yml
