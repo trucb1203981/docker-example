@@ -17,6 +17,12 @@
 
 2. Xây dựng và chạy container:
     ```sh
+    docker-compose build --no-cache
+    ```
+
+    hoặc
+
+    ```sh
     docker-compose up --build
     ```
 
@@ -26,8 +32,8 @@
     ```
 
 ## Sử dụng
-- Muốn build nginx chuyển đổi proxy từ port 80 sang 8000 của laravel thì trong file docker-compose.yml mở comment dịch vụ nginx và đóng port của dịch vụ app
-- Truy cập ứng dụng tại `http://localhost`
+- Không cần chạy php artisan serve --host=0.0.0.0 --port=8000 bởi vì trong docker image php:8.3-fpm-alpine đã có php-fpm và tự động khởi chạy php-fpm ở port 9000
+- Truy cập ứng dụng tại `http://localhost` sẽ tự động chuyển sang `https://localhost`
 ## Gỡ lỗi
 - Để xem logs của container:
     ```sh
